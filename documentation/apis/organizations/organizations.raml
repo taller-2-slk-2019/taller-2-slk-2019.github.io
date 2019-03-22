@@ -3,33 +3,28 @@
         responses:
             200:
                 body:
-                    type: OrganizationProfile
+                    type: response.OrganizationProfile
                     example: !include examples/organizationsGetByIdResponse.json
             500:
-                !include errorResponse.raml
+                !include ../errorResponse.raml
 
 /create:
     post:
         body:
-            type: OrganizationRequest
+            type: request.Organization
             example: !include examples/organizationsCreateRequest.json
         responses:
             200:
                 body:
-                    type: Organization
+                    type: response.Organization
                     example: !include examples/organizationsCreateResponse.json
             500:
-                !include errorResponse.raml
+                !include ../errorResponse.raml
 
 /{id}/inviteUser/{userId}:
     patch:
         responses:
             200:
-                body:
-                    type: object
-                    properties:
-                        invitationToken: string
-                    example: 
-                        invitationToken: "a8a9189b251514048dd3959b9ea376533e3499ff"
+                !include ../tokenResponse.raml
             500:
-                !include errorResponse.raml
+                !include ../errorResponse.raml

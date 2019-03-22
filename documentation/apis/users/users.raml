@@ -1,0 +1,50 @@
+/{id}:
+    get:
+        responses:
+            200:
+                body:
+                    type: response.User
+                    example: !include examples/usersGetProfileResponse.json
+            500:
+                !include ../errorResponse.raml
+    patch:
+        body:
+            type: request.User
+            example: !include examples/usersUpdateProfileRequest.json
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
+
+/register:
+    post:
+        body:
+            type: request.User
+            example: !include examples/usersRegisterRequest.json
+        responses:
+            200:
+                body:
+                    type: response.User
+                    example: !include examples/usersRegisterResponse.json
+            500:
+                !include ../errorResponse.raml
+
+/{id}/location:
+    patch:
+        body:
+            type: request.UserLocation
+            example: !include examples/usersUpdateLocationRequest.json
+        responses:
+            200:
+                !include ../successResponse.raml 
+            500:
+                !include ../errorResponse.raml
+
+/organizations/acceptInvitation/{token}:
+    patch:
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml

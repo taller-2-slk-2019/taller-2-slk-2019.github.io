@@ -1,0 +1,36 @@
+#%RAML 1.0 Library
+
+types:
+    User:
+        type: object
+        properties:
+            name: string
+            surname: string
+            email: string
+            picture?: string
+
+    UserLocation:
+        type: object
+        properties:
+            latitude: number
+            longitude: number
+
+    Organization:
+        type: object
+        properties:
+            name: string
+            picture: string
+            latitude: number
+            longitude: number
+            description: string
+            welcome: string
+            creatorId: integer
+
+    Channel:
+        type: object
+        properties:
+            name: string
+            description: string
+            welcome: string
+            creatorId: integer
+            organizationId: integer
