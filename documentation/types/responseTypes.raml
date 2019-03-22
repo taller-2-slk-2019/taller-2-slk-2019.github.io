@@ -24,7 +24,7 @@ types:
     UserWithRole:
         type: User
         properties:
-            UserOrganizations: UserRole
+            userOrganizations: UserRole
 
     Organization:
         type: object
@@ -42,8 +42,8 @@ types:
     OrganizationProfile:
         type: Organization
         properties:
-            Users: UserWithRole[]
-            Channels: Channel[]
+            users: UserWithRole[]
+            channels: Channel[]
 
     Channel:
         type: object
