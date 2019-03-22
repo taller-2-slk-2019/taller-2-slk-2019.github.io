@@ -21,8 +21,11 @@
             500:
                 !include ../errorResponse.raml
 
-/{id}/inviteUser/{userId}:
+/{id}/inviteUser:
     patch:
+        body:
+            type: request.UserEmail
+            example: !include examples/userEmailRequest.json
         responses:
             200:
                 !include ../tokenResponse.raml
