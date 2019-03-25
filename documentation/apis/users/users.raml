@@ -48,3 +48,11 @@
                 !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml
+
+/{id}/channels/abandon/{channelId}:
+    patch:
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
