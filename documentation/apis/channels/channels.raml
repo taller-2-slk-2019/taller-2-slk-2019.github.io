@@ -10,3 +10,11 @@
                     example: !include examples/channelsCreateResponse.json
             500:
                 !include ../errorResponse.raml
+
+/{id}/addUser/{userId}:
+    patch:
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
