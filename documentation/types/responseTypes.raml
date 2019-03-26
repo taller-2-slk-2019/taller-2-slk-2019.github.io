@@ -73,3 +73,18 @@ types:
         type: OrganizationData
         properties:
             userChannels: ChannelWithUser[]
+
+    Message:
+        type: object
+        properties:
+            id: integer
+            type: string
+            data: string
+            createdAt: datetime
+            updatedAt: datetime
+            sender: User
+
+    Messages:
+        type: object
+        properties:
+            messages: Message[]

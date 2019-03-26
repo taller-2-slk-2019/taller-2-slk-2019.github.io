@@ -18,3 +18,13 @@
                 !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml
+
+/{id}/messages/{page?}:
+    get:
+        responses:
+            200:
+                body:
+                    type: response.Messages
+                    example: !include examples/messagesResponse.json
+            500:
+                !include ../errorResponse.raml
