@@ -3,8 +3,18 @@
         responses:
             200:
                 body:
-                    type: response.OrganizationProfile
+                    type: response.OrganizationData
                     example: !include examples/organizationsGetByIdResponse.json
+            500:
+                !include ../errorResponse.raml
+
+/{id}/forUser/{userId}:
+    get:
+        responses:
+            200:
+                body:
+                    type: response.OrganizationProfile
+                    example: !include examples/organizationsGetProfileForUserResponse.json
             500:
                 !include ../errorResponse.raml
 

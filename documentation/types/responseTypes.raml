@@ -39,11 +39,20 @@ types:
             updatedAt: datetime
             createdAt: datetime
 
-    OrganizationProfile:
+    OrganizationData:
         type: Organization
         properties:
             users: UserWithRole[]
-            channels: Channel[]
+
+    OrganizationWithRole:
+        type: Organization
+        properties:
+            userOrganizations: UserRole
+
+    UserWithOrganizations:
+        type: User
+        properties:
+            organizations: OrganizationWithRole[]
 
     Channel:
         type: object
@@ -54,3 +63,13 @@ types:
             welcome: string
             updatedAt: datetime
             createdAt: datetime
+
+    ChannelWithUser:
+        type: Channel
+        properties:
+            users: User[]
+
+    OrganizationProfile:
+        type: OrganizationData
+        properties:
+            userChannels: ChannelWithUser[]

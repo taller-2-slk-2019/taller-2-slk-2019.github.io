@@ -170,16 +170,54 @@ pre code {
 .required {
   color: #f00;
 }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Slack Api API documentation</h1><p>https://slack-taller2.herokuapp.com/</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="users" class="panel-title">/users</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_users__id_"><span class="parent">/users</span>/{id}</a> <span class="methods"><a href="#users__id__get"><span class="badge badge_get">get</span></a> <a href="#users__id__patch"><span class="badge badge_patch">patch</span></a></span></h4></div><div id="panel_users__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#users__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div><div onclick="window.location.href = '#users__id__patch'" class="list-group-item"><span class="badge badge_patch">patch</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="users__id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/users</span>/{id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#users__id__get_request" data-toggle="tab">Request</a></li><li><a href="#users__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="users__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="users__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Slack Api API documentation</h1><p>https://slack-taller2.herokuapp.com/</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="users" class="panel-title">/users</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_users__id_"><span class="parent">/users</span>/{id}</a> <span class="methods"><a href="#users__id__get"><span class="badge badge_get">get</span></a> <a href="#users__id__patch"><span class="badge badge_patch">patch</span></a></span></h4></div><div id="panel_users__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#users__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div><div onclick="window.location.href = '#users__id__patch'" class="list-group-item"><span class="badge badge_patch">patch</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="users__id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/users</span>/{id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#users__id__get_request" data-toggle="tab">Request</a></li><li><a href="#users__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="users__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="users__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li><li><strong>organizations</strong>: <em><span class="required">required</span>(array of response.OrganizationWithRole)</em><p><strong>Items</strong>: OrganizationWithRole</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>latitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>longitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>userOrganizations</strong>: <em><span class="required">required</span>(object)</em><ul><li><strong>role</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li></ul></li></ul></div></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
     "id": 1,
-    "name": "Pepe",
+    "name": "jose",
     "surname": "Perez",
     "email": "pepe@gmail.com",
     "picture": "default.jpg",
     "latitude": null,
     "longitude": null,
-    "createdAt": "2019-03-20T22:53:02.528Z",
-    "updatedAt": "2019-03-20T22:53:02.528Z"
+    "createdAt": "2019-03-22T07:39:58.855Z",
+    "updatedAt": "2019-03-26T18:44:56.899Z",
+    "organizations": [
+        {
+            "id": 1,
+            "name": "org",
+            "picture": "picture",
+            "latitude": 1234.434,
+            "longitude": 123.432,
+            "description": "description for organization",
+            "welcome": "welcome to the org!",
+            "createdAt": "2019-03-22T07:41:07.906Z",
+            "updatedAt": "2019-03-22T07:41:07.906Z",
+            "userOrganizations": {
+                "role": "creator",
+                "createdAt": "2019-03-22T07:41:07.919Z",
+                "updatedAt": "2019-03-22T07:41:07.919Z",
+                "organizationId": 1,
+                "userId": 1
+            }
+        },
+        {
+            "id": 2,
+            "name": "org",
+            "picture": "picture",
+            "latitude": 1234.434,
+            "longitude": 123.432,
+            "description": "description for organization",
+            "welcome": "welcome to the org!",
+            "createdAt": "2019-03-22T07:41:09.383Z",
+            "updatedAt": "2019-03-22T07:41:09.383Z",
+            "userOrganizations": {
+                "role": "creator",
+                "createdAt": "2019-03-22T07:41:09.387Z",
+                "updatedAt": "2019-03-22T07:41:09.387Z",
+                "organizationId": 2,
+                "userId": 1
+            }
+        }
+    ]
 }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>error</strong>: <em><span class="required">required</span>(string)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
   "error": "some error message"
 }</code></pre></div></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="users__id__patch"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_patch">patch</span> <span class="parent">/users</span>/{id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#users__id__patch_request" data-toggle="tab">Request</a></li><li><a href="#users__id__patch_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="users__id__patch_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li></ul><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em>(string)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{ 
@@ -229,52 +267,115 @@ pre code {
   "success": true
 }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>error</strong>: <em><span class="required">required</span>(string)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
   "error": "some error message"
-}</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="organizations" class="panel-title">/organizations</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_organizations__id_"><span class="parent">/organizations</span>/{id}</a> <span class="methods"><a href="#organizations__id__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_organizations__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#organizations__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="organizations__id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/organizations</span>/{id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#organizations__id__get_request" data-toggle="tab">Request</a></li><li><a href="#organizations__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="organizations__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="organizations__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>latitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>longitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>users</strong>: <em><span class="required">required</span>(array of response.UserWithRole)</em><p><strong>Items</strong>: UserWithRole</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li><li><strong>userOrganizations</strong>: <em><span class="required">required</span>(object)</em><ul><li><strong>role</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li></ul></li></ul></div></li><li><strong>channels</strong>: <em><span class="required">required</span>(array of response.Channel)</em><p><strong>Items</strong>: Channel</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li></ul></div></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+}</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="organizations" class="panel-title">/organizations</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_organizations__id_"><span class="parent">/organizations</span>/{id}</a> <span class="methods"><a href="#organizations__id__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_organizations__id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#organizations__id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="organizations__id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/organizations</span>/{id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#organizations__id__get_request" data-toggle="tab">Request</a></li><li><a href="#organizations__id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="organizations__id__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="organizations__id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>latitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>longitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>users</strong>: <em><span class="required">required</span>(array of response.UserWithRole)</em><p><strong>Items</strong>: UserWithRole</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li><li><strong>userOrganizations</strong>: <em><span class="required">required</span>(object)</em><ul><li><strong>role</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li></ul></li></ul></div></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
     "id": 1,
-    "name": "organization",
+    "name": "org",
     "picture": "picture",
-    "latitude": 123.45678,
-    "longitude": 1234.455645,
-    "description": "org desc",
-    "welcome": "welcome!",
-    "createdAt": "2019-01-01T03:00:00.000Z",
-    "updatedAt": "2019-01-01T03:00:00.000Z",
+    "latitude": 1234.434,
+    "longitude": 123.432,
+    "description": "description for organization",
+    "welcome": "welcome to the org!",
+    "createdAt": "2019-03-22T07:41:07.906Z",
+    "updatedAt": "2019-03-22T07:41:07.906Z",
     "users": [
         {
             "id": 1,
-            "name": "pepe",
-            "surname": "perez",
-            "email": "pe@dsad",
-            "picture": "picture",
+            "name": "jose",
+            "surname": "Perez",
+            "email": "pepe@gmail.com",
+            "picture": "default.jpg",
             "latitude": null,
             "longitude": null,
-            "createdAt": "2019-01-01T03:00:00.000Z",
-            "updatedAt": "2019-01-01T03:00:00.000Z",
+            "createdAt": "2019-03-22T07:39:58.855Z",
+            "updatedAt": "2019-03-26T18:44:56.899Z",
             "userOrganizations": {
                 "role": "creator",
-                "createdAt": "2019-01-01T03:00:00.000Z",
-                "updatedAt": "2019-01-01T03:00:00.000Z",
+                "createdAt": "2019-03-22T07:41:07.919Z",
+                "updatedAt": "2019-03-22T07:41:07.919Z",
+                "organizationId": 1,
+                "userId": 1
+            }
+        }
+    ]
+}</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>error</strong>: <em><span class="required">required</span>(string)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "error": "some error message"
+}</code></pre></div></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_organizations__id__foruser__userid_"><span class="parent">/organizations</span>/{id}/forUser/{userId}</a> <span class="methods"><a href="#organizations__id__foruser__userid__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_organizations__id__foruser__userid_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#organizations__id__foruser__userid__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="organizations__id__foruser__userid__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/organizations</span>/{id}/forUser/{userId}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#organizations__id__foruser__userid__get_request" data-toggle="tab">Request</a></li><li><a href="#organizations__id__foruser__userid__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="organizations__id__foruser__userid__get_request"><h3>URI Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>userId</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="organizations__id__foruser__userid__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>latitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>longitude</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>users</strong>: <em><span class="required">required</span>(array of response.UserWithRole)</em><p><strong>Items</strong>: UserWithRole</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li><li><strong>userOrganizations</strong>: <em><span class="required">required</span>(object)</em><ul><li><strong>role</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li></ul></li></ul></div></li><li><strong>userChannels</strong>: <em><span class="required">required</span>(array of response.ChannelWithUser)</em><p><strong>Items</strong>: ChannelWithUser</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>welcome</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>users</strong>: <em><span class="required">required</span>(array of response.User)</em><p><strong>Items</strong>: User</p><div class="items"><ul><li><strong>id</strong>: <em><span class="required">required</span>(integer)</em></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>surname</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>email</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>picture</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>updatedAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>createdAt</strong>: <em><span class="required">required</span>(datetime)</em></li><li><strong>latitude</strong>: <em>(number)</em></li><li><strong>longitude</strong>: <em>(number)</em></li></ul></div></li></ul></div></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    "id": 1,
+    "name": "org",
+    "picture": "picture",
+    "latitude": 1234.434,
+    "longitude": 123.432,
+    "description": "description for organization",
+    "welcome": "welcome to the org!",
+    "createdAt": "2019-03-22T07:41:07.906Z",
+    "updatedAt": "2019-03-22T07:41:07.906Z",
+    "users": [
+        {
+            "id": 1,
+            "name": "jose",
+            "surname": "Perez",
+            "email": "pepe@gmail.com",
+            "picture": "default.jpg",
+            "latitude": null,
+            "longitude": null,
+            "createdAt": "2019-03-22T07:39:58.855Z",
+            "updatedAt": "2019-03-26T18:44:56.899Z",
+            "userOrganizations": {
+                "role": "creator",
+                "createdAt": "2019-03-22T07:41:07.919Z",
+                "updatedAt": "2019-03-22T07:41:07.919Z",
+                "organizationId": 1,
+                "userId": 1
             }
         }
     ],
-    "channels": [
+    "userChannels": [
         {
-            "id": 9,
-            "name": "org",
+            "id": 1,
+            "name": "channel",
             "visibility": "public",
-            "description": "description for organization",
+            "description": "description for channel",
             "welcome": "welcome to the org!",
-            "createdAt": "2019-03-19T19:09:34.278Z",
-            "updatedAt": "2019-03-19T19:09:34.278Z",
-        },
-        {
-            "id": 10,
-            "name": "org",
-            "visibility": "public",
-            "description": "description for organization",
-            "welcome": "welcome to the org!",
-            "createdAt": "2019-03-19T19:09:53.672Z",
-            "updatedAt": "2019-03-19T19:09:53.672Z",
+            "createdAt": "2019-03-22T07:42:56.935Z",
+            "updatedAt": "2019-03-22T07:42:56.935Z",
+            "creatorId": 1,
+            "organizationId": 1,
+            "users": [
+                {
+                    "id": 1,
+                    "name": "jose",
+                    "surname": "Perez",
+                    "email": "pepe@gmail.com",
+                    "picture": "default.jpg",
+                    "latitude": null,
+                    "longitude": null,
+                    "createdAt": "2019-03-22T07:39:58.855Z",
+                    "updatedAt": "2019-03-26T18:44:56.899Z",
+                    "channelUsers": {
+                        "createdAt": "2019-03-26T19:02:37.006Z",
+                        "updatedAt": "2019-03-26T19:02:37.006Z",
+                        "channelId": 1,
+                        "userId": 1
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Pepe",
+                    "surname": "Perez",
+                    "email": "pepe@gmail.com",
+                    "picture": "default.jpg",
+                    "latitude": null,
+                    "longitude": null,
+                    "createdAt": "2019-03-22T07:40:03.343Z",
+                    "updatedAt": "2019-03-22T07:40:03.343Z",
+                    "channelUsers": {
+                        "createdAt": "2019-03-26T19:02:37.006Z",
+                        "updatedAt": "2019-03-26T19:02:37.006Z",
+                        "channelId": 1,
+                        "userId": 2
+                    }
+                }
+            ]
         }
     ]
 }</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>error</strong>: <em><span class="required">required</span>(string)</em></li></ul><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
