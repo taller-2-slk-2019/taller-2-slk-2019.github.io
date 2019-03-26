@@ -1,0 +1,10 @@
+/create:
+    post:
+        body:
+            type: request.Message
+            example: !include examples/messageCreateRequest.json
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
