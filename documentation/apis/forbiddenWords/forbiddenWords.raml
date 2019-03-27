@@ -1,0 +1,27 @@
+/{organizationId}:
+    get:
+        responses:
+            200:
+                body:
+                    type: response.ForbiddenWords
+                    example: !include examples/forbiddenWordsGetResponse.json
+            500:
+                !include ../errorResponse.raml
+
+    post:
+        body:
+            type: request.ForbiddenWord
+            example: !include examples/forbiddenWordCreateRequest.json
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
+
+/{id}:
+    delete:
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml

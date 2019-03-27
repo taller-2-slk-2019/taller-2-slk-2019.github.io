@@ -88,3 +88,14 @@ types:
         type: object
         properties:
             messages: Message[]
+
+    ForbiddenWord:
+        type: object
+        properties:
+            id: integer
+            word: string
+
+    ForbiddenWords:
+        type: object
+        properties:
+            forbiddenWords: ForbiddenWord[]
