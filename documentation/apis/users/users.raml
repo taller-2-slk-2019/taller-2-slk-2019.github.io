@@ -1,13 +1,15 @@
 /{id}:
     get:
+        description: "Get user profile"
         responses:
             200:
                 body:
-                    type: response.UserWithOrganizations
+                    type: response.User
                     example: !include examples/usersGetProfileResponse.json
             500:
                 !include ../errorResponse.raml
-    patch:
+    put:
+        description: "Update user profile"
         body:
             type: request.User
             example: !include examples/usersUpdateProfileRequest.json
@@ -17,8 +19,25 @@
             500:
                 !include ../errorResponse.raml
 
-/register:
+/:
+    get:
+        description: "Get users that belong to an organization"
+        queryParameters:
+            organizationId:
+                description: "The organization for which to fetch the users"
+                required: true
+                type: integer
+                example: 18
+        responses:
+            200:
+                body:
+                    type: response.OrganizationUsers
+                    example: !include examples/usersOrganizationsResponse.json
+            500:
+                !include ../errorResponse.raml
+                
     post:
+        description: "Register an user"
         body:
             type: request.User
             example: !include examples/usersRegisterRequest.json
@@ -31,36 +50,13 @@
                 !include ../errorResponse.raml
 
 /{id}/location:
-    patch:
+    put:
+        description: "Update user location"
         body:
             type: request.UserLocation
             example: !include examples/usersUpdateLocationRequest.json
         responses:
             200:
                 !include ../successResponse.raml 
-            500:
-                !include ../errorResponse.raml
-
-/organizations/acceptInvitation/{token}:
-    patch:
-        responses:
-            200:
-                !include ../successResponse.raml
-            500:
-                !include ../errorResponse.raml
-
-/{id}/organizations/abandon/{organizationId}:
-    patch:
-        responses:
-            200:
-                !include ../successResponse.raml
-            500:
-                !include ../errorResponse.raml
-
-/{id}/channels/abandon/{channelId}:
-    patch:
-        responses:
-            200:
-                !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml

@@ -6,7 +6,6 @@
     "picture": "default.jpg",
     "updatedAt": "2019-03-18T19:36:49.423Z",
     "createdAt": "2019-03-18T19:36:49.423Z",
-    "latitude": null,
-    "longitude": null,
-    "deletedAt": null
+    "latitude": 123,
+    "longitude": 456
 }

@@ -39,20 +39,20 @@ types:
             updatedAt: datetime
             createdAt: datetime
 
-    OrganizationData:
-        type: Organization
-        properties:
-            users: UserWithRole[]
-
     OrganizationWithRole:
         type: Organization
         properties:
             userOrganizations: UserRole
 
-    UserWithOrganizations:
-        type: User
+    UserOrganizations:
+        type: object
         properties:
             organizations: OrganizationWithRole[]
+
+    OrganizationUsers:
+        type: object
+        properties:
+            users: UserWithRole[]
 
     Channel:
         type: object
@@ -60,19 +60,15 @@ types:
             id: integer
             name: string
             description: string
+            visibility: string
             welcome: string
             updatedAt: datetime
             createdAt: datetime
 
-    ChannelWithUser:
-        type: Channel
+    Channels:
+        type: object
         properties:
-            users: User[]
-
-    OrganizationProfile:
-        type: OrganizationData
-        properties:
-            userChannels: ChannelWithUser[]
+            channels: Channel[]
 
     Message:
         type: object

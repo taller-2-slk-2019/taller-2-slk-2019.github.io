@@ -7,7 +7,7 @@ types:
             name: string
             surname: string
             email: string
-            picture?: string
+            picture: string
 
     UserLocation:
         type: object
@@ -19,6 +19,11 @@ types:
         type: object
         properties:
             userEmail: string
+
+    UserId:
+        type: object
+        properties:
+            userId: integer
 
     Organization:
         type: object
@@ -36,6 +41,7 @@ types:
         properties:
             name: string
             description: string
+            visibility: string
             welcome: string
             creatorId: integer
             organizationId: integer
@@ -52,3 +58,9 @@ types:
         type: object
         properties:
             word: string
+            organizationId: integer
+
+    Token:
+        type: object
+        properties:
+            token: string

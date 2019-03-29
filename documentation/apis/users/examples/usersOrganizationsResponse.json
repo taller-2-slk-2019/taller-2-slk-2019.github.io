@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": 5,
+            "name": "carl",
+            "surname": "carlitos",
+            "email": "carl",
+            "picture": "picture",
+            "latitude": 123,
+            "longitude": 123,
+            "createdAt": "2019-03-29T19:13:42.844Z",
+            "updatedAt": "2019-03-29T19:20:53.595Z",
+            "userOrganizations": {
+                "role": "member",
+                "createdAt": "2019-03-29T19:18:51.860Z",
+                "updatedAt": "2019-03-29T19:18:51.860Z"
+            }
+        },
+        {
+            "id": 4,
+            "name": "carl",
+            "surname": "carlitos",
+            "email": "carl2",
+            "picture": "default.jpg",
+            "latitude": 123,
+            "longitude": 123,
+            "createdAt": "2019-03-22T07:40:04.583Z",
+            "updatedAt": "2019-03-29T19:21:26.589Z",
+            "userOrganizations": {
+                "role": "member",
+                "createdAt": "2019-03-29T19:21:43.342Z",
+                "updatedAt": "2019-03-29T19:21:43.342Z"
+            }
+        }
+    ]
+}

@@ -1,5 +1,27 @@
-/create:
+/:
+    get:
+        description: "Get channels for an user and an organization"
+        queryParameters:
+            userId:
+                description: "The user for which to fetch the channels"
+                required: true
+                type: integer
+                example: 4
+            organizationId:
+                description: "The organization for which to fetch the channels"
+                required: true
+                type: integer
+                example: 6
+        responses:
+            200:
+                body:
+                    type: response.Channels
+                    example: !include examples/channelsListResponse.json
+            500:
+                !include ../errorResponse.raml
+                
     post:
+        description: "Create a channel"
         body:
             type: request.Channel
             example: !include examples/channelsCreateRequest.json
@@ -11,20 +33,23 @@
             500:
                 !include ../errorResponse.raml
 
-/{id}/addUser/{userId}:
-    patch:
+/{id}/users:
+    post:
+        description: "Add an user to the channel"
+        body:
+            type: request.UserId
+            example: !include examples/userIdRequest.json
         responses:
             200:
                 !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml
 
-/{id}/messages/{page?}:
-    get:
+/{id}/users/{userid}:
+    delete:
+        description: "Remove an user from the channel"
         responses:
             200:
-                body:
-                    type: response.Messages
-                    example: !include examples/messagesResponse.json
+                !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml

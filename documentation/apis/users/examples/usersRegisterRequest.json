@@ -1,5 +1,6 @@
 {
     "name": "Pepe", 
     "surname": "Perez", 
-    "email": "pepe@gmail.com"
+    "email": "pepe@gmail.com",
+    "picture": "some linke to image"
 }

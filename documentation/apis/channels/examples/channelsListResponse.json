@@ -1,0 +1,22 @@
+{
+    "channels": [
+        {
+            "id": 6,
+            "name": "carl",
+            "visibility": "public",
+            "description": "ds",
+            "welcome": "dsd",
+            "createdAt": "2019-03-29T19:46:28.216Z",
+            "updatedAt": "2019-03-29T19:46:28.216Z"
+        },
+        {
+            "id": 7,
+            "name": "carl",
+            "visibility": "private",
+            "description": "ds",
+            "welcome": "dsd",
+            "createdAt": "2019-03-29T19:46:30.341Z",
+            "updatedAt": "2019-03-29T19:46:30.341Z"
+        }
+    ]
+}

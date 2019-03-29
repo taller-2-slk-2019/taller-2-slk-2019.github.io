@@ -1,4 +1,24 @@
-/create:
+/:
+    get:
+        description: "Get messages from a channel"
+        queryParameters:
+            channelId:
+                description: "The channel for which to fetch the messages"
+                required: true
+                type: integer
+                example: 4
+            offset:
+                description: "How many messages to skip (default: 0)"
+                required: false
+                type: integer
+                example: 67
+        responses:
+            200:
+                body:
+                    type: response.Messages
+                    example: !include examples/messagesListResponse.json
+            500:
+                !include ../errorResponse.raml
     post:
         body:
             type: request.Message

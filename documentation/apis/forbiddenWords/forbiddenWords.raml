@@ -1,5 +1,12 @@
-/{organizationId}:
+/:
     get:
+        description: "Get all forbidden words for an organization"
+        queryParameters:
+            organizationId:
+                description: "The organization for which to fetch the words"
+                required: true
+                type: integer
+                example: 4
         responses:
             200:
                 body:
@@ -9,6 +16,7 @@
                 !include ../errorResponse.raml
 
     post:
+        description: "Add a forbidden word to an organization"
         body:
             type: request.ForbiddenWord
             example: !include examples/forbiddenWordCreateRequest.json
@@ -20,6 +28,7 @@
 
 /{id}:
     delete:
+        description: "Deletes a forbidden word"
         responses:
             200:
                 !include ../successResponse.raml

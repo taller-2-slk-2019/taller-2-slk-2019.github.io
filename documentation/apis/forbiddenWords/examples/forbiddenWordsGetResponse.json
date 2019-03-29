@@ -2,17 +2,11 @@
     "forbiddenWords": [
         {
             "id": 2,
-            "word": "word",
-            "createdAt": "2019-03-26T23:38:37.133Z",
-            "updatedAt": "2019-03-26T23:38:37.133Z",
-            "organizationId": 1
+            "word": "word"
         },
         {
             "id": 3,
-            "word": "word2",
-            "createdAt": "2019-03-27T00:15:43.960Z",
-            "updatedAt": "2019-03-27T00:15:43.960Z",
-            "organizationId": 1
+            "word": "word2"
         }
     ]
 }

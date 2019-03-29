@@ -1,25 +1,33 @@
 /{id}:
     get:
+        description: "Get organization profile"
         responses:
             200:
                 body:
-                    type: response.OrganizationData
+                    type: response.Organization
                     example: !include examples/organizationsGetByIdResponse.json
             500:
                 !include ../errorResponse.raml
 
-/{id}/forUser/{userId}:
+/:
     get:
+        description: "Get organizations that belong to user"
+        queryParameters:
+            userId:
+                description: "The user for which to fetch the organizations"
+                required: true
+                type: integer
+                example: 4
         responses:
             200:
                 body:
-                    type: response.OrganizationProfile
-                    example: !include examples/organizationsGetProfileForUserResponse.json
+                    type: response.UserOrganizations
+                    example: !include examples/organizationsGetForUserResponse.json
             500:
                 !include ../errorResponse.raml
 
-/create:
     post:
+        description: "Create an organization"
         body:
             type: request.Organization
             example: !include examples/organizationsCreateRequest.json
@@ -31,13 +39,34 @@
             500:
                 !include ../errorResponse.raml
 
-/{id}/inviteUser:
-    patch:
+/{id}/invitations:
+    post:
+        description: "Invite an user to the organization"
         body:
             type: request.UserEmail
             example: !include examples/userEmailRequest.json
         responses:
             200:
                 !include ../tokenResponse.raml
+            500:
+                !include ../errorResponse.raml
+
+/{id}/users:
+    post:
+        description: "Add an user to the organization"
+        body:
+            !include ../tokenRequest.raml
+        responses:
+            200:
+                !include ../successResponse.raml
+            500:
+                !include ../errorResponse.raml
+
+/{id}/users/{userId}:
+    delete:
+        description: "Removes an user from the organization"
+        responses:
+            200:
+                !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml
