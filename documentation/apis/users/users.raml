@@ -4,14 +4,14 @@
         responses:
             200:
                 body:
-                    type: response.User
+                    type: responseUser
                     example: !include examples/usersGetProfileResponse.json
             500:
                 !include ../errorResponse.raml
     put:
         description: "Update user profile"
         body:
-            type: request.User
+            type: requestUser
             example: !include examples/usersUpdateProfileRequest.json
         responses:
             200:
@@ -31,7 +31,7 @@
         responses:
             200:
                 body:
-                    type: response.OrganizationUsers
+                    type: responseOrganizationUsers
                     example: !include examples/usersOrganizationsResponse.json
             500:
                 !include ../errorResponse.raml
@@ -39,12 +39,12 @@
     post:
         description: "Register an user"
         body:
-            type: request.User
+            type: requestUser
             example: !include examples/usersRegisterRequest.json
         responses:
             200:
                 body:
-                    type: response.User
+                    type: responseUser
                     example: !include examples/usersRegisterResponse.json
             500:
                 !include ../errorResponse.raml
@@ -53,7 +53,7 @@
     put:
         description: "Update user location"
         body:
-            type: request.UserLocation
+            type: requestUserLocation
             example: !include examples/usersUpdateLocationRequest.json
         responses:
             200:

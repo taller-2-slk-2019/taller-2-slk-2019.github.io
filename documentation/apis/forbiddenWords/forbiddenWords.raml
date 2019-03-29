@@ -10,7 +10,7 @@
         responses:
             200:
                 body:
-                    type: response.ForbiddenWords
+                    type: responseForbiddenWords
                     example: !include examples/forbiddenWordsGetResponse.json
             500:
                 !include ../errorResponse.raml
@@ -18,7 +18,7 @@
     post:
         description: "Add a forbidden word to an organization"
         body:
-            type: request.ForbiddenWord
+            type: requestForbiddenWord
             example: !include examples/forbiddenWordCreateRequest.json
         responses:
             200:

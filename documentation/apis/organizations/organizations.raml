@@ -4,7 +4,7 @@
         responses:
             200:
                 body:
-                    type: response.Organization
+                    type: responseOrganization
                     example: !include examples/organizationsGetByIdResponse.json
             500:
                 !include ../errorResponse.raml
@@ -21,7 +21,7 @@
         responses:
             200:
                 body:
-                    type: response.UserOrganizations
+                    type: responseUserOrganizations
                     example: !include examples/organizationsGetForUserResponse.json
             500:
                 !include ../errorResponse.raml
@@ -29,12 +29,12 @@
     post:
         description: "Create an organization"
         body:
-            type: request.Organization
+            type: requestOrganization
             example: !include examples/organizationsCreateRequest.json
         responses:
             200:
                 body:
-                    type: response.Organization
+                    type: responseOrganization
                     example: !include examples/organizationsCreateResponse.json
             500:
                 !include ../errorResponse.raml
@@ -43,7 +43,7 @@
     post:
         description: "Invite an user to the organization"
         body:
-            type: request.UserEmail
+            type: requestUserEmail
             example: !include examples/userEmailRequest.json
         responses:
             200:

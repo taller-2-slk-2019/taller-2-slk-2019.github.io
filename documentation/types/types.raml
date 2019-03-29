@@ -1,0 +1,179 @@
+commonSuccess:
+    type: object
+    properties:
+        success: boolean
+
+commonError:
+    type: object
+    properties:
+        error: string
+
+commonToken:
+    type: object
+    properties:
+        token: string
+
+
+
+requestUser:
+    type: object
+    properties:
+        name: string
+        surname: string
+        email: string
+        picture: string
+
+requestUserLocation:
+    type: object
+    properties:
+        latitude: number
+        longitude: number
+
+requestUserEmail:
+    type: object
+    properties:
+        userEmail: string
+
+requestUserId:
+    type: object
+    properties:
+        userId: integer
+
+requestOrganization:
+    type: object
+    properties:
+        name: string
+        picture: string
+        latitude: number
+        longitude: number
+        description: string
+        welcome: string
+        creatorId: integer
+
+requestChannel:
+    type: object
+    properties:
+        name: string
+        description: string
+        visibility: string
+        welcome: string
+        creatorId: integer
+        organizationId: integer
+
+requestMessage:
+    type: object
+    properties:
+        type: string
+        data: string
+        senderId: integer
+        channelId: integer
+
+requestForbiddenWord:
+    type: object
+    properties:
+        word: string
+        organizationId: integer
+
+requestToken:
+    type: object
+    properties:
+        token: string
+
+
+
+
+
+responseUser:
+    type: object
+    properties:
+        id: integer
+        name: string
+        surname: string
+        email: string
+        picture: string
+        updatedAt: datetime
+        createdAt: datetime
+        latitude?: number
+        longitude?: number
+
+responseUserRole:
+    type: object
+    properties:
+        role: string
+        updatedAt: datetime
+        createdAt: datetime
+
+responseUserWithRole:
+    type: responseUser
+    properties:
+        userOrganizations: responseUserRole
+
+responseOrganization:
+    type: object
+    properties:
+        id: integer
+        name: string
+        picture: string
+        latitude: number
+        longitude: number
+        description: string
+        welcome: string
+        updatedAt: datetime
+        createdAt: datetime
+
+responseOrganizationWithRole:
+    type: responseOrganization
+    properties:
+        userOrganizations: responseUserRole
+
+responseUserOrganizations:
+    type: object
+    properties:
+        organizations: responseOrganizationWithRole[]
+
+responseOrganizationUsers:
+    type: object
+    properties:
+        users: responseUserWithRole[]
+
+responseChannel:
+    type: object
+    properties:
+        id: integer
+        name: string
+        description: string
+        visibility: string
+        welcome: string
+        updatedAt: datetime
+        createdAt: datetime
+
+responseChannels:
+    type: object
+    properties:
+        channels: responseChannel[]
+
+responseMessage:
+    type: object
+    properties:
+        id: integer
+        type: string
+        data: string
+        createdAt: datetime
+        updatedAt: datetime
+        sender: responseUser
+
+responseMessages:
+    type: object
+    properties:
+        messages: responseMessage[]
+
+responseForbiddenWord:
+    type: object
+    properties:
+        id: integer
+        word: string
+
+responseForbiddenWords:
+    type: object
+    properties:
+        forbiddenWords: responseForbiddenWord[]

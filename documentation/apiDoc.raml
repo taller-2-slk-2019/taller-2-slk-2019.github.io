@@ -4,10 +4,8 @@ title: Slack Api
 baseUri: https://slack-taller2.herokuapp.com/
 mediaType:  application/json
 
-uses:
-  request: types/requestTypes.raml
-  response: types/responseTypes.raml
-  common: types/commonTypes.raml
+types:
+  !include types/types.raml
 
 /users:
   !include apis/users/users.raml

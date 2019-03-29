@@ -15,13 +15,13 @@
         responses:
             200:
                 body:
-                    type: response.Messages
+                    type: responseMessages
                     example: !include examples/messagesListResponse.json
             500:
                 !include ../errorResponse.raml
     post:
         body:
-            type: request.Message
+            type: requestMessage
             example: !include examples/messageCreateRequest.json
         responses:
             200:

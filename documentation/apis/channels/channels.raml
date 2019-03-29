@@ -15,7 +15,7 @@
         responses:
             200:
                 body:
-                    type: response.Channels
+                    type: responseChannels
                     example: !include examples/channelsListResponse.json
             500:
                 !include ../errorResponse.raml
@@ -23,12 +23,12 @@
     post:
         description: "Create a channel"
         body:
-            type: request.Channel
+            type: requestChannel
             example: !include examples/channelsCreateRequest.json
         responses:
             200:
                 body:
-                    type: response.Channel
+                    type: responseChannel
                     example: !include examples/channelsCreateResponse.json
             500:
                 !include ../errorResponse.raml
@@ -37,7 +37,7 @@
     post:
         description: "Add an user to the channel"
         body:
-            type: request.UserId
+            type: requestUserId
             example: !include examples/userIdRequest.json
         responses:
             200:
