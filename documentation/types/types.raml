@@ -19,7 +19,14 @@ requestUser:
     type: object
     properties:
         name: string
-        surname: string
+        token: string
+        email: string
+        picture: string
+
+requestUserProfile:
+    type: object
+    properties:
+        name: string
         email: string
         picture: string
 
@@ -88,7 +95,6 @@ responseUser:
     properties:
         id: integer
         name: string
-        surname: string
         email: string
         picture: string
         updatedAt: datetime

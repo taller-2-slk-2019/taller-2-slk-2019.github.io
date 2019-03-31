@@ -2,7 +2,6 @@
     {
         "id": 5,
         "name": "carl",
-        "surname": "carlitos",
         "email": "carl",
         "picture": "picture",
         "latitude": 123,
@@ -18,7 +17,6 @@
     {
         "id": 4,
         "name": "carl",
-        "surname": "carlitos",
         "email": "carl2",
         "picture": "default.jpg",
         "latitude": 123,
