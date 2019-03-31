@@ -1,12 +1,10 @@
-{
-    "forbiddenWords": [
-        {
-            "id": 2,
-            "word": "word"
-        },
-        {
-            "id": 3,
-            "word": "word2"
-        }
-    ]
-}
+[
+    {
+        "id": 2,
+        "word": "word"
+    },
+    {
+        "id": 3,
+        "word": "word2"
+    }
+]

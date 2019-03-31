@@ -21,7 +21,7 @@
         responses:
             200:
                 body:
-                    type: responseUserOrganizations
+                    type: responseOrganizationWithRole[]
                     example: !include examples/organizationsGetForUserResponse.json
             500:
                 !include ../errorResponse.raml

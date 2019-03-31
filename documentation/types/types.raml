@@ -126,16 +126,6 @@ responseOrganizationWithRole:
     properties:
         userOrganizations: responseUserRole
 
-responseUserOrganizations:
-    type: object
-    properties:
-        organizations: responseOrganizationWithRole[]
-
-responseOrganizationUsers:
-    type: object
-    properties:
-        users: responseUserWithRole[]
-
 responseChannel:
     type: object
     properties:
@@ -147,11 +137,6 @@ responseChannel:
         updatedAt: datetime
         createdAt: datetime
 
-responseChannels:
-    type: object
-    properties:
-        channels: responseChannel[]
-
 responseMessage:
     type: object
     properties:
@@ -162,18 +147,8 @@ responseMessage:
         updatedAt: datetime
         sender: responseUser
 
-responseMessages:
-    type: object
-    properties:
-        messages: responseMessage[]
-
 responseForbiddenWord:
     type: object
     properties:
         id: integer
         word: string
-
-responseForbiddenWords:
-    type: object
-    properties:
-        forbiddenWords: responseForbiddenWord[]
