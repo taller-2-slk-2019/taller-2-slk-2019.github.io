@@ -20,6 +20,12 @@
             500:
                 !include ../errorResponse.raml
     post:
+        queryParameters:
+            userToken:
+                description: "Message's sender"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestMessage
             example: !include examples/messageCreateRequest.json

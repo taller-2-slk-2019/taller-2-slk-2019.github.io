@@ -1,6 +1,5 @@
 {
     "type": "text",
     "data": "this is a message",
-    "senderId": 18,
     "channelId": 23
 }
