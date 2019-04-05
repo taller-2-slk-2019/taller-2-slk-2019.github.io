@@ -2,7 +2,6 @@
     "name": "channel",
     "visibility": "public",
     "description": "description for channel", 
-    "welcome": "welcome to the org!", 
-    "creatorId": 1,
+    "welcome": "welcome to the org!",
     "organizationId": 1
 }

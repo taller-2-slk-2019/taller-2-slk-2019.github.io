@@ -2,11 +2,11 @@
     get:
         description: "Get channels for an user and an organization"
         queryParameters:
-            userId:
+            userToken:
                 description: "The user for which to fetch the channels"
                 required: true
-                type: integer
-                example: 4
+                type: string
+                example: "abcdefghijk123"
             organizationId:
                 description: "The organization for which to fetch the channels"
                 required: true
@@ -22,6 +22,12 @@
                 
     post:
         description: "Create a channel"
+        queryParameters:
+            userToken:
+                description: "The channel's creator"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestChannel
             example: !include examples/channelsCreateRequest.json

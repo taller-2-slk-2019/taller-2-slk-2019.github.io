@@ -1,6 +1,12 @@
-/{id}:
+/profile:
     get:
         description: "Get user profile"
+        queryParameters:
+            userToken:
+                description: "The user for which to fetch the profile"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         responses:
             200:
                 body:
@@ -10,6 +16,12 @@
                 !include ../errorResponse.raml
     put:
         description: "Update user profile"
+        queryParameters:
+            userToken:
+                description: "The user for which to update the profile"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestUserProfile
             example: !include examples/usersUpdateProfileRequest.json
@@ -49,9 +61,15 @@
             500:
                 !include ../errorResponse.raml
 
-/{id}/location:
+/location:
     put:
         description: "Update user location"
+        queryParameters:
+            userToken:
+                description: "The user for which to update the location"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestUserLocation
             example: !include examples/usersUpdateLocationRequest.json

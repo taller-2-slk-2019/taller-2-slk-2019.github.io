@@ -13,11 +13,11 @@
     get:
         description: "Get organizations that belong to user"
         queryParameters:
-            userId:
+            userToken:
                 description: "The user for which to fetch the organizations"
                 required: true
-                type: integer
-                example: 4
+                type: string
+                example: "abcdefghijk123"
         responses:
             200:
                 body:
@@ -28,6 +28,12 @@
 
     post:
         description: "Create an organization"
+        queryParameters:
+            userToken:
+                description: "The organization's creator"
+                required: true
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestOrganization
             example: !include examples/organizationsCreateRequest.json
