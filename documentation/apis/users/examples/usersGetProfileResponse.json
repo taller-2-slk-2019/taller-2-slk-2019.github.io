@@ -1,6 +1,7 @@
 {
     "id": 1,
     "name": "jose",
+    "username": "josesito",
     "email": "pepe@gmail.com",
     "picture": "default.jpg",
     "latitude": 123,

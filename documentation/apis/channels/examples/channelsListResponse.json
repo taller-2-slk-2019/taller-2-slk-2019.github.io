@@ -1,7 +1,7 @@
 [
     {
         "id": 6,
-        "name": "carl",
+        "name": "channel",
         "visibility": "public",
         "description": "ds",
         "welcome": "dsd",
@@ -10,7 +10,7 @@
     },
     {
         "id": 7,
-        "name": "carl",
+        "name": "channel2",
         "visibility": "private",
         "description": "ds",
         "welcome": "dsd",
