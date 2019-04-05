@@ -8,8 +8,8 @@
         "sender": {
             "id": 1,
             "name": "jose",
-            "surname": "Perez",
             "email": "pepe@gmail.com",
+            "username": "josesito",
             "picture": "default.jpg",
             "latitude": 123,
             "longitude": 123,
@@ -26,8 +26,8 @@
         "sender": {
             "id": 1,
             "name": "jose",
-            "surname": "Perez",
             "email": "pepe@gmail.com",
+            "username": "josesito2",
             "picture": "default.jpg",
             "latitude": 123,
             "longitude": 123,
