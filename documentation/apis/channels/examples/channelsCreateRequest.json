@@ -1,6 +1,6 @@
 {
     "name": "channel",
-    "visibility": "public",
+    "isPublic": true,
     "description": "description for channel", 
     "welcome": "welcome to the org!",
     "organizationId": 1

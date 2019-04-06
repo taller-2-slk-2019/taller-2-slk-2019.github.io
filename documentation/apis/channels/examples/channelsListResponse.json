@@ -2,7 +2,7 @@
     {
         "id": 6,
         "name": "channel",
-        "visibility": "public",
+        "isPublic": true,
         "description": "ds",
         "welcome": "dsd",
         "createdAt": "2019-03-29T19:46:28.216Z",
@@ -11,7 +11,7 @@
     {
         "id": 7,
         "name": "channel2",
-        "visibility": "private",
+        "isPublic": false,
         "description": "ds",
         "welcome": "dsd",
         "createdAt": "2019-03-29T19:46:30.341Z",
