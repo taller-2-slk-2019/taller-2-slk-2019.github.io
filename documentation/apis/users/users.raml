@@ -78,3 +78,20 @@
                 !include ../successResponse.raml 
             500:
                 !include ../errorResponse.raml
+
+/invitations:
+    get:
+        description: "Get organizations that invited the user"
+        queryParameters:
+            userToken:
+                description: "The user for which to fecth the invitations"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        responses:
+            200:
+                body:
+                    type: responseUserInvitation[]
+                    example: !include examples/userInvitationsResponse.json
+            500:
+                !include ../errorResponse.raml
