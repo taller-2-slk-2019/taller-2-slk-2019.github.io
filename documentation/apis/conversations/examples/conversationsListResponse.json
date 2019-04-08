@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "users": [
+            {
+                "id": 10,
+                "name": "user",
+                "email": "t@test.com",
+                "picture": "https://lalala",
+                "latitude": null,
+                "longitude": null,
+                "username": "josesito",
+                "createdAt": "2019-04-05T21:35:47.383Z",
+                "updatedAt": "2019-04-05T21:35:47.383Z"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "users": [
+            {
+                "id": 11,
+                "name": "other",
+                "email": "t@test.com2",
+                "picture": "https://lalala2",
+                "latitude": null,
+                "longitude": null,
+                "username": "josesito2",
+                "createdAt": "2019-04-05T21:35:47.383Z",
+                "updatedAt": "2019-04-05T21:35:47.383Z"
+            }
+        ]
+    }
+]

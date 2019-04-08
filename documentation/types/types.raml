@@ -85,6 +85,12 @@ requestToken:
     properties:
         token: string
 
+requestConversation:
+    type: object
+    properties:
+        userId: integer
+        organizationId: integer
+
 
 
 
@@ -166,3 +172,9 @@ responseUserInvitation:
         organization: string
         description: string
         invitedAt: datetime
+
+responseConversation:
+    type: object
+    properties:
+        id: integer
+        users: responseUser[]
