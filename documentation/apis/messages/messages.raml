@@ -2,16 +2,21 @@
     get:
         description: "Get messages from a channel"
         queryParameters:
-            channelId:
-                description: "The channel for which to fetch the messages"
-                required: true
-                type: integer
-                example: 4
             offset:
                 description: "How many messages to skip (default: 0)"
                 required: false
                 type: integer
                 example: 67
+            channelId:
+                description: "The channel for which to fetch the messages"
+                required: true
+                type: integer
+                example: 4
+            conversationId:
+                description: "The conversation for which to fetch the messages"
+                required: true
+                type: integer
+                example: 4
         responses:
             200:
                 body:

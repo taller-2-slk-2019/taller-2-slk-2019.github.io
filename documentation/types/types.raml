@@ -71,8 +71,8 @@ requestMessage:
     properties:
         type: string
         data: string
-        senderId: integer
         channelId: integer
+        conversationId: integer
 
 requestForbiddenWord:
     type: object
@@ -155,6 +155,8 @@ responseMessage:
         id: integer
         type: string
         data: string
+        channelId?: integer
+        conversationId?: integer
         createdAt: datetime
         updatedAt: datetime
         sender: responseUser
