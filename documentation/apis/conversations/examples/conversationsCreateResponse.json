@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "users": [
+        {
+            "id": 10,
+            "name": "fdsfdsf",
+            "email": "t@test.com",
+            "picture": "https://lalala",
+            "latitude": null,
+            "longitude": null,
+            "username": "josesito",
+            "createdAt": "2019-04-05T21:35:47.383Z",
+            "updatedAt": "2019-04-05T21:35:47.383Z"
+        }
+    ]
+}

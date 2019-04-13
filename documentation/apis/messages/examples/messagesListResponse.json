@@ -3,6 +3,8 @@
         "id": 23,
         "type": "text",
         "data": "data",
+        "channelId": null,
+        "conversationId": 1,
         "createdAt": "2019-03-26T21:42:33.824Z",
         "updatedAt": "2019-03-26T21:42:33.824Z",
         "sender": {
@@ -21,6 +23,8 @@
         "id": 22,
         "type": "text",
         "data": "data",
+        "channelId": null,
+        "conversationId": 1,
         "createdAt": "2019-03-26T21:36:57.025Z",
         "updatedAt": "2019-03-26T21:36:57.025Z",
         "sender": {

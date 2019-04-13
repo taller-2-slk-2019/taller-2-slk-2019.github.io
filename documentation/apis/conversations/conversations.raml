@@ -1,0 +1,40 @@
+/:
+    get:
+        description: "Get conversations for an user and an organization"
+        queryParameters:
+            userToken:
+                description: "The user for which to fetch the conversations"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+            organizationId:
+                description: "The organization for which to fetch the conversations"
+                required: true
+                type: integer
+                example: 6
+        responses:
+            200:
+                body:
+                    type: responseConversation[]
+                    example: !include examples/conversationsListResponse.json
+            500:
+                !include ../errorResponse.raml
+                
+    post:
+        description: "Create a conversation"
+        queryParameters:
+            userToken:
+                description: "The conversation's creator"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        body:
+            type: requestConversation
+            example: !include examples/conversationsCreateRequest.json
+        responses:
+            200:
+                body:
+                    type: responseConversation
+                    example: !include examples/conversationsCreateResponse.json
+            500:
+                !include ../errorResponse.raml
