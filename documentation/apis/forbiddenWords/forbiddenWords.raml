@@ -22,7 +22,9 @@
             example: !include examples/forbiddenWordCreateRequest.json
         responses:
             200:
-                !include ../successResponse.raml
+                body:
+                    type: responseForbiddenWord
+                    example: !include examples/forbiddenWordCreateResponse.json
             500:
                 !include ../errorResponse.raml
 
