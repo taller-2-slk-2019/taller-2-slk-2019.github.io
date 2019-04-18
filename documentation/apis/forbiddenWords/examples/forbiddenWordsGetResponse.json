@@ -1,10 +1,16 @@
 [
     {
         "id": 2,
-        "word": "word"
+        "word": "word",
+        "createdAt": "2019-04-12T23:09:29.300Z",
+        "updatedAt": "2019-04-12T23:09:29.300Z",
+        "organizationId": 4
     },
     {
         "id": 3,
-        "word": "word2"
+        "word": "word2",
+        "createdAt": "2019-04-12T23:15:17.914Z",
+        "updatedAt": "2019-04-12T23:15:17.914Z",
+        "organizationId": 4
     }
 ]
