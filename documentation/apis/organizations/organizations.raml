@@ -47,13 +47,13 @@
 
 /{id}/invitations:
     post:
-        description: "Invite an user to the organization"
+        description: "Invite users to the organization"
         body:
-            type: requestUserEmail
+            type: requestUserEmails
             example: !include examples/userEmailRequest.json
         responses:
             200:
-                !include ../tokenResponse.raml
+                !include ../successResponse.raml
             500:
                 !include ../errorResponse.raml
 

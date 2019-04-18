@@ -1,3 +1,7 @@
 {
-    "userEmail": "pepe@gmail.com"
+    "userEmails": [
+        "pepe@gmail.com",
+        "jose@gmail.com",
+        "carlos@gmail.com"
+    ]
 }
