@@ -22,7 +22,7 @@
                 body:
                     type: responseMessage[]
                     example: !include examples/messagesListResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
     post:
         queryParameters:
@@ -35,7 +35,6 @@
             type: requestMessage
             example: !include examples/messageCreateRequest.json
         responses:
-            200:
-                !include ../successResponse.raml
-            500:
+            204:
+            400:
                 !include ../errorResponse.raml

@@ -12,7 +12,7 @@
                 body:
                     type: responseUser
                     example: !include examples/usersGetProfileResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
     put:
         description: "Update user profile"
@@ -26,9 +26,8 @@
             type: requestUserProfile
             example: !include examples/usersUpdateProfileRequest.json
         responses:
-            200:
-                !include ../successResponse.raml
-            500:
+            204: 
+            400:
                 !include ../errorResponse.raml
 
 /:
@@ -45,7 +44,7 @@
                 body:
                     type: responseUserWithRole[]
                     example: !include examples/usersOrganizationsResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
                 
     post:
@@ -58,7 +57,7 @@
                 body:
                     type: responseUser
                     example: !include examples/usersRegisterResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
 
 /location:
@@ -74,9 +73,8 @@
             type: requestUserLocation
             example: !include examples/usersUpdateLocationRequest.json
         responses:
-            200:
-                !include ../successResponse.raml 
-            500:
+            204:
+            400:
                 !include ../errorResponse.raml
 
 /invitations:
@@ -93,5 +91,5 @@
                 body:
                     type: responseUserInvitation[]
                     example: !include examples/userInvitationsResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml

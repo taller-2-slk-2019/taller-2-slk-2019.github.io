@@ -6,7 +6,7 @@
                 body:
                     type: responseOrganization
                     example: !include examples/organizationsGetByIdResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
 
 /:
@@ -23,7 +23,7 @@
                 body:
                     type: responseOrganizationWithRole[]
                     example: !include examples/organizationsGetForUserResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
 
     post:
@@ -42,7 +42,7 @@
                 body:
                     type: responseOrganization
                     example: !include examples/organizationsCreateResponse.json
-            500:
+            400:
                 !include ../errorResponse.raml
 
 /{id}/invitations:
@@ -52,9 +52,8 @@
             type: requestUserEmails
             example: !include examples/userEmailRequest.json
         responses:
-            200:
-                !include ../successResponse.raml
-            500:
+            204:
+            400:
                 !include ../errorResponse.raml
 
 /users:
@@ -63,16 +62,14 @@
         body:
             !include ../tokenRequest.raml
         responses:
-            200:
-                !include ../successResponse.raml
-            500:
+            204:
+            400:
                 !include ../errorResponse.raml
 
 /{id}/users/{userId}:
     delete:
         description: "Removes an user from the organization"
         responses:
-            200:
-                !include ../successResponse.raml
-            500:
+            204:
+            400:
                 !include ../errorResponse.raml
