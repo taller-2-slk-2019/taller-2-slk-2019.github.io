@@ -52,7 +52,10 @@
             type: requestUserEmails
             example: !include examples/userEmailRequest.json
         responses:
-            204:
+            200:
+                body:
+                    type: string[]
+                    example: !include examples/organizationsInvitationsResponse.json 
             400:
                 !include ../errorResponse.raml
 
