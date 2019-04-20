@@ -93,3 +93,11 @@
                     example: !include examples/userInvitationsResponse.json
             400:
                 !include ../errorResponse.raml
+
+/invitations/{invitationToken}:
+    delete:
+        description: "Deletes invitation to organization"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
