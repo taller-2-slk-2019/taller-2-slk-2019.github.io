@@ -1,0 +1,23 @@
+/fcm/tokens:
+    post:
+        description: "Associate a fcm token to an user"
+        queryParameters:
+            userToken:
+                description: "The user for which to associate the token"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        body:
+            !include ../tokenRequest.raml
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
+/fcm/tokens/{fcmToken}:
+    delete:
+        description: "Deletes a fcm token"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
