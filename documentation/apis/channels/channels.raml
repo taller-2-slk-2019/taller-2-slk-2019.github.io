@@ -78,3 +78,14 @@
             204:
             400:
                 !include ../errorResponse.raml
+
+/{id}/statistics:
+    get:
+        description: "Get channel statistics"
+        responses:
+            200:
+                body:
+                    type: responseChannelStatistics
+                    example: !include examples/channelStatisticsResponse.json
+            400:
+                !include ../errorResponse.raml
