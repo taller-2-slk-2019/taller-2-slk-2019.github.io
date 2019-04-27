@@ -1,0 +1,11 @@
+/messages:
+    post:
+        description: "Create a bot's message"
+        body:
+            type: requestBotMessage
+            example: !include examples/messageBotCreateRequest.json
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+

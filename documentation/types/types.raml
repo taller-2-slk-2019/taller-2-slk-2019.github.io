@@ -69,6 +69,13 @@ requestMessage:
         channelId: integer
         conversationId: integer
 
+requestBotMessage:
+    type: object
+    properties:
+        message: string
+        channelId: integer
+        bot: string
+
 requestForbiddenWord:
     type: object
     properties:
