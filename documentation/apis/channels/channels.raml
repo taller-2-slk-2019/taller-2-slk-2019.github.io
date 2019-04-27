@@ -39,6 +39,17 @@
             400:
                 !include ../errorResponse.raml
 
+/{id}:
+    get:
+        description: "Get channel info"
+        responses:
+            200:
+                body:
+                    type: responseChannel
+                    example: !include examples/channelResponse.json
+            400:
+                !include ../errorResponse.raml
+
 /{id}/users:
     post:
         description: "Add an user to the channel"

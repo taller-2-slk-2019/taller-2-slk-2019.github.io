@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "name": "channel",
+    "isPublic": true,
+    "description": "description for channel",
+    "welcome": "welcome to the org!",
+    "createdAt": "2019-03-22T07:42:56.935Z",
+    "updatedAt": "2019-03-22T07:42:56.935Z",
+}
