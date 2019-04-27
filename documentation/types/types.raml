@@ -94,6 +94,12 @@ requestConversation:
         userId: integer
         organizationId: integer
 
+requestLogin:
+    type: object
+    properties:
+        username: string
+        password: string
+
 
 
 
@@ -190,3 +196,12 @@ responseChannelStatistics:
     type: object
     properties:
         messageCount: integer
+
+responseAdmin:
+    type: object
+    properties:
+        id: integer
+        username: string
+        token: string
+        createdAt: datetime
+        updatedAt: datetime

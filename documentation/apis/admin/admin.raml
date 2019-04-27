@@ -1,0 +1,13 @@
+/login:
+    post:
+        description: "Login as an admin"
+        body:
+            type: requestLogin
+            example: !include examples/loginRequest.json
+        responses:
+            200:
+                body:
+                    type: responseAdmin
+                    example: !include examples/adminLoginResponse.json
+            400:
+                !include ../errorResponse.raml
