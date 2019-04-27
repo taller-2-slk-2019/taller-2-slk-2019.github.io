@@ -1,5 +1,6 @@
 {
     "bot": "tito bot",
     "message": "I am a bot",
-    "channelId": 1
+    "channelId": 1,
+    "conversationId": null
 }
