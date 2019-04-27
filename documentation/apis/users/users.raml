@@ -30,6 +30,17 @@
             400:
                 !include ../errorResponse.raml
 
+/{id}:
+    get:
+        description: "Get user profile"
+        responses:
+            200:
+                body:
+                    type: responseUser
+                    example: !include examples/usersGetProfileResponse.json
+            400:
+                !include ../errorResponse.raml
+
 /:
     get:
         description: "Get users that belong to an organization"
