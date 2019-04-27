@@ -51,6 +51,16 @@
                 !include ../errorResponse.raml
 
 /{id}/users:
+    get:
+        description: "Get users that belong to channel"
+        responses:
+            200:
+                body:
+                    type: responseUser[]
+                    example: !include examples/channelUsersResponse.json
+            400:
+                !include ../errorResponse.raml
+
     post:
         description: "Add an user to the channel"
         body:
