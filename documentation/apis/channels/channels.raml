@@ -3,8 +3,8 @@
         description: "Get channels for an user and an organization"
         queryParameters:
             userToken:
-                description: "The user for which to fetch the channels"
-                required: true
+                description: "The user for which to fetch the channels. If not set returns all channels"
+                required: false
                 type: string
                 example: "abcdefghijk123"
             organizationId:
@@ -47,6 +47,18 @@
                 body:
                     type: responseChannel
                     example: !include examples/channelResponse.json
+            400:
+                !include ../errorResponse.raml
+
+    delete:
+        description: "Deletes channel"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
+        responses:
+            204:
             400:
                 !include ../errorResponse.raml
 

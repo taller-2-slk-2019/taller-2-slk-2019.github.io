@@ -9,13 +9,25 @@
             400:
                 !include ../errorResponse.raml
 
+    delete:
+        description: "Deletes organization"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
 /:
     get:
         description: "Get organizations that belong to user"
         queryParameters:
             userToken:
-                description: "The user for which to fetch the organizations"
-                required: true
+                description: "The user for which to fetch the organizations. If not set returns all organizations."
+                required: false
                 type: string
                 example: "abcdefghijk123"
         responses:
