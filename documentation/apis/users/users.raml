@@ -112,3 +112,20 @@
             204:
             400:
                 !include ../errorResponse.raml
+
+/statistics:
+    get:
+        description: "Get user statistics, such as the number of messages sent or organizations to which it belongs"
+        queryParameters:
+            userToken:
+                description: "The user for which to fecth the invitations"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        responses:
+            200:
+                body:
+                    type: responseUserStatistics
+                    example: !include examples/userStatisticsResponse.json
+            400:
+                !include ../errorResponse.raml
