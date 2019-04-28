@@ -100,6 +100,13 @@ requestLogin:
         username: string
         password: string
 
+requestBot:
+    type: object
+    properties:
+        name: string
+        url: string
+        organizationId: integer
+
 
 
 
@@ -203,5 +210,14 @@ responseAdmin:
         id: integer
         username: string
         token: string
+        createdAt: datetime
+        updatedAt: datetime
+
+responseBot:
+    type: object
+    properties:
+        id: integer
+        name: string
+        url: string
         createdAt: datetime
         updatedAt: datetime

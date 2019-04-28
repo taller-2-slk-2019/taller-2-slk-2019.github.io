@@ -17,6 +17,11 @@
 
     post:
         description: "Add a forbidden word to an organization"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
         body:
             type: requestForbiddenWord
             example: !include examples/forbiddenWordCreateRequest.json
@@ -31,6 +36,11 @@
 /{id}:
     delete:
         description: "Deletes a forbidden word"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
         responses:
             204:
             400:

@@ -9,3 +9,52 @@
             400:
                 !include ../errorResponse.raml
 
+/:
+    get:
+        description: "Get all bots for an organization"
+        queryParameters:
+            organizationId:
+                description: "The organization for which to fetch the bots"
+                required: true
+                type: integer
+                example: 4
+
+        responses:
+            200:
+                body:
+                    type: responseBot[]
+                    example: !include examples/botsGetResponse.json
+            400:
+                !include ../errorResponse.raml
+
+    post:
+        description: "Add a bot to an organization"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
+        body:
+            type: requestBot
+            example: !include examples/botCreateRequest.json
+        responses:
+            200:
+                body:
+                    type: responseBot
+                    example: !include examples/botCreateResponse.json
+            400:
+                !include ../errorResponse.raml
+
+/{id}:
+    delete:
+        description: "Deletes a bot"
+        headers:
+            adminToken:
+                description: The admin token
+                type: string
+                example: "dasfdsaf6546"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
