@@ -11,9 +11,10 @@
 
     delete:
         description: "Deletes organization"
-        headers:
+        queryParameters:
             adminToken:
                 description: The admin token
+                required: true
                 type: string
                 example: "dasfdsaf6546"
         responses:

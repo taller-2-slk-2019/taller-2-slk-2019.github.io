@@ -29,9 +29,10 @@
 
     post:
         description: "Add a bot to an organization"
-        headers:
+        queryParameters:
             adminToken:
                 description: The admin token
+                required: true
                 type: string
                 example: "dasfdsaf6546"
         body:
@@ -48,9 +49,10 @@
 /{id}:
     delete:
         description: "Deletes a bot"
-        headers:
+        queryParameters:
             adminToken:
                 description: The admin token
+                required: true
                 type: string
                 example: "dasfdsaf6546"
         responses:

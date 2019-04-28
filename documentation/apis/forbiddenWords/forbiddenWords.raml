@@ -17,9 +17,10 @@
 
     post:
         description: "Add a forbidden word to an organization"
-        headers:
+        queryParameters:
             adminToken:
                 description: The admin token
+                required: true
                 type: string
                 example: "dasfdsaf6546"
         body:
@@ -36,9 +37,10 @@
 /{id}:
     delete:
         description: "Deletes a forbidden word"
-        headers:
+        queryParameters:
             adminToken:
                 description: The admin token
+                required: true
                 type: string
                 example: "dasfdsaf6546"
         responses:
