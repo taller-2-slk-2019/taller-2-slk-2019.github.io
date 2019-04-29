@@ -193,6 +193,12 @@ responseUserInvitation:
         organization: responseOrganization
         invitedAt: datetime
 
+responseUserStatistics:
+    type: object
+    properties:
+        organizations: string[]
+        messagesSent: integer
+
 responseConversation:
     type: object
     properties:
