@@ -89,3 +89,14 @@
             204:
             400:
                 !include ../errorResponse.raml
+
+/{id}/statistics:
+    get:
+        description: "Get statistics about the organization"
+        responses:
+            200:
+                body:
+                    type: responseOrganizationStatistics
+                    example: !include examples/organizationsStatisticsResponse.json 
+            400:
+                !include ../errorResponse.raml

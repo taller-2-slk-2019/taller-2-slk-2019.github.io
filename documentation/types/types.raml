@@ -227,3 +227,21 @@ responseBot:
         url: string
         createdAt: datetime
         updatedAt: datetime
+
+responseRolesCount:
+    type: object
+    properties:
+        role: string
+        count: integer
+
+responseMessagesCount:
+    type: object
+    properties:
+        type: string
+        count: integer
+
+responseOrganizationStatistics:
+    type: object
+    properties:
+        usersCount: responseRolesCount[]
+        messagesCount: responseMessagesCount[]

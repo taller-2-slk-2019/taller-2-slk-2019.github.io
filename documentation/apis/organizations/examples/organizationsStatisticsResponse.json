@@ -1,0 +1,34 @@
+{
+    "usersCount": [
+        {
+            "role": "creator",
+            "count": "1"
+        },
+        {
+            "role": "member",
+            "count": "8"
+        },
+        {
+            "role": "moedrator",
+            "count": "3"
+        }
+    ],
+    "messagesCount": [
+        {
+            "type": "file",
+            "count": "3"
+        },
+        {
+            "type": "text",
+            "count": "121"
+        },
+        {
+            "type": "image",
+            "count": "3"
+        },
+        {
+            "type": "code",
+            "count": "2"
+        }
+    ]
+}
