@@ -34,7 +34,7 @@
                 type: string
                 example: "abcdefghijk123"
         body:
-            type: requestChannel
+            type: requestChannelCreate
             example: !include examples/channelsCreateRequest.json
         responses:
             200:
@@ -52,6 +52,16 @@
                 body:
                     type: responseChannel
                     example: !include examples/channelResponse.json
+            400:
+                !include ../errorResponse.raml
+
+    put:
+        description: "Update a channel"
+        body:
+            type: requestChannel
+            example: !include examples/channelsUpdateRequest.json
+        responses:
+            204:
             400:
                 !include ../errorResponse.raml
 
