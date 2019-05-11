@@ -54,9 +54,14 @@
         queryParameters:
             userToken:
                 description: "The organization's creator"
-                required: true
+                required: false
                 type: string
                 example: "abcdefghijk123"
+            adminToken:
+                description: "The admin"
+                required: false
+                type: string
+                example: "afsdffghdsad"
         body:
             type: requestOrganization
             example: !include examples/organizationsCreateRequest.json
