@@ -9,6 +9,16 @@
             400:
                 !include ../errorResponse.raml
 
+    put:
+        description: "Update an organization"
+        body:
+            type: requestOrganization
+            example: !include examples/organizationsCreateRequest.json
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
     delete:
         description: "Deletes organization"
         queryParameters:
