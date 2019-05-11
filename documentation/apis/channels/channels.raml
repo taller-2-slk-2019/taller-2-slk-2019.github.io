@@ -30,9 +30,14 @@
         queryParameters:
             userToken:
                 description: "The channel's creator"
-                required: true
+                required: false
                 type: string
                 example: "abcdefghijk123"
+            adminToken:
+                description: "The admin"
+                required: false
+                type: string
+                example: "abdasdasd3"
         body:
             type: requestChannelCreate
             example: !include examples/channelsCreateRequest.json
