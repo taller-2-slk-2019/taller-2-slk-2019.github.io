@@ -83,6 +83,22 @@
                 !include ../errorResponse.raml
 
 /{id}/users/{userId}:
+    put:
+        description: "Update user's role in organization"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: true
+                type: string
+                example: "dasfdsaf6546"
+        body:
+            type: requestUserRole
+            example: !include examples/organizationsUserRoleRequest.json
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
     delete:
         description: "Removes an user from the organization"
         responses:
