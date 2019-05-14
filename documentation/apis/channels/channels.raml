@@ -137,6 +137,19 @@
             400:
                 !include ../errorResponse.raml
 
+    delete:
+        description: "Abandon the channel"
+        queryParameters:
+            userToken:
+                description: "The user who wants to abandon the channel"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
 /{id}/users/{userId}:
     delete:
         description: "Remove an user from the channel"
