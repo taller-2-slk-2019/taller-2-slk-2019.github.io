@@ -11,6 +11,17 @@
 
     put:
         description: "Update an organization"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestOrganization
             example: !include examples/organizationsCreateRequest.json
@@ -24,9 +35,14 @@
         queryParameters:
             adminToken:
                 description: The admin token
-                required: true
+                required: false
                 type: string
                 example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         responses:
             204:
             400:
@@ -76,6 +92,17 @@
 /{id}/invitations:
     post:
         description: "Invite users to the organization"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestUserEmails
             example: !include examples/userEmailRequest.json
@@ -103,9 +130,14 @@
         queryParameters:
             adminToken:
                 description: The admin token
-                required: true
+                required: false
                 type: string
                 example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestUserRole
             example: !include examples/organizationsUserRoleRequest.json
@@ -116,6 +148,17 @@
 
     delete:
         description: "Removes an user from the organization"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         responses:
             204:
             400:

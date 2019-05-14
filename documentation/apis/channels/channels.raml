@@ -62,6 +62,17 @@
 
     put:
         description: "Update a channel"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestChannel
             example: !include examples/channelsUpdateRequest.json
@@ -72,6 +83,17 @@
 
     delete:
         description: "Deletes channel"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         queryParameters:
             adminToken:
                 description: The admin token
@@ -96,6 +118,17 @@
 
     post:
         description: "Add an user to the channel"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         body:
             type: requestUserId
             example: !include examples/userIdRequest.json
@@ -107,6 +140,17 @@
 /{id}/users/{userId}:
     delete:
         description: "Remove an user from the channel"
+        queryParameters:
+            adminToken:
+                description: The admin token
+                required: false
+                type: string
+                example: "dasfdsaf6546"
+            userToken:
+                description: "The user who makes the action"
+                required: false
+                type: string
+                example: "abcdefghijk123"
         responses:
             204:
             400:
