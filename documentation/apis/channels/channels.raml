@@ -117,7 +117,7 @@
                 !include ../errorResponse.raml
 
     post:
-        description: "Add an user to the channel"
+        description: "Add an user to the channel. If userId is not set, adds the current user to the channel"
         queryParameters:
             adminToken:
                 description: The admin token
