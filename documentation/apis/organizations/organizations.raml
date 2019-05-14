@@ -164,6 +164,20 @@
             400:
                 !include ../errorResponse.raml
 
+/{id}/users:
+    delete:
+        description: "Abandon the organization"
+        queryParameters:
+            userToken:
+                description: "The user who wants to abandon the organization"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        responses:
+            204:
+            400:
+                !include ../errorResponse.raml
+
 /{id}/statistics:
     get:
         description: "Get statistics about the organization"
