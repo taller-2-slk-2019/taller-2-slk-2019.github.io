@@ -129,3 +129,14 @@
                     example: !include examples/userStatisticsResponse.json
             400:
                 !include ../errorResponse.raml
+
+/{id}/statistics:
+    get:
+        description: "Get user statistics, such as the number of messages sent or organizations to which it belongs"
+        responses:
+            200:
+                body:
+                    type: responseUserStatistics
+                    example: !include examples/userStatisticsResponse.json
+            400:
+                !include ../errorResponse.raml
