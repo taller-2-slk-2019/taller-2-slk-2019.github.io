@@ -144,6 +144,17 @@
             400:
                 !include ../errorResponse.raml
 
+/{id}/new-users:
+    get:
+        description: "Get users that don't belong to channel"
+        responses:
+            200:
+                body:
+                    type: responseUser[]
+                    example: !include examples/channelUsersResponse.json
+            400:
+                !include ../errorResponse.raml
+
 /{id}/users/{userId}:
     delete:
         description: "Remove an user from the channel"
