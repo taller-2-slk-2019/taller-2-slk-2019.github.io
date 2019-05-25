@@ -5,7 +5,7 @@
             type: requestBotMessage
             example: !include examples/messageBotCreateRequest.json
         responses:
-            204:
+            201:
             400 401 404 500:
                 !include ../errorResponse.raml
 
@@ -39,7 +39,7 @@
             type: requestBot
             example: !include examples/botCreateRequest.json
         responses:
-            200:
+            201:
                 body:
                     type: responseBot
                     example: !include examples/botCreateResponse.json
