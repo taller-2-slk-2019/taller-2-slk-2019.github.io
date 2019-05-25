@@ -6,7 +6,7 @@
                 body:
                     type: responseOrganization
                     example: !include examples/organizationsGetByIdResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
     put:
@@ -27,7 +27,7 @@
             example: !include examples/organizationsCreateRequest.json
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
     delete:
@@ -45,7 +45,7 @@
                 example: "abcdefghijk123"
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /:
@@ -62,7 +62,7 @@
                 body:
                     type: responseOrganizationWithRole[]
                     example: !include examples/organizationsGetForUserResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
     post:
@@ -86,7 +86,7 @@
                 body:
                     type: responseOrganization
                     example: !include examples/organizationsCreateResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /{id}/invitations:
@@ -111,7 +111,7 @@
                 body:
                     type: string[]
                     example: !include examples/organizationsInvitationsResponse.json 
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /users:
@@ -121,7 +121,7 @@
             !include ../tokenRequest.raml
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /{id}/users/{userId}:
@@ -143,7 +143,7 @@
             example: !include examples/organizationsUserRoleRequest.json
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
     delete:
@@ -161,7 +161,7 @@
                 example: "abcdefghijk123"
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /{id}/users:
@@ -175,7 +175,7 @@
                 example: "abcdefghijk123"
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /{id}/statistics:
@@ -186,5 +186,5 @@
                 body:
                     type: responseOrganizationStatistics
                     example: !include examples/organizationsStatisticsResponse.json 
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml

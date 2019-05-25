@@ -6,7 +6,7 @@
             example: !include examples/messageBotCreateRequest.json
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /:
@@ -24,7 +24,7 @@
                 body:
                     type: responseBot[]
                     example: !include examples/botsGetResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
     post:
@@ -43,7 +43,7 @@
                 body:
                     type: responseBot
                     example: !include examples/botCreateResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /{id}:
@@ -57,6 +57,6 @@
                 example: "dasfdsaf6546"
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 

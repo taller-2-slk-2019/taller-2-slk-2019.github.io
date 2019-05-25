@@ -11,7 +11,7 @@
             !include ../tokenRequest.raml
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
 
 /fcm/tokens/{fcmToken}:
@@ -19,5 +19,5 @@
         description: "Deletes a fcm token"
         responses:
             204:
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml

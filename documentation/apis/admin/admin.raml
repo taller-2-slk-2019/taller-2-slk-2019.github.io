@@ -9,5 +9,5 @@
                 body:
                     type: responseAdmin
                     example: !include examples/adminLoginResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml

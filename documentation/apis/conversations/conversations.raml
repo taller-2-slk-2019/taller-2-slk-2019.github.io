@@ -17,7 +17,7 @@
                 body:
                     type: responseConversation[]
                     example: !include examples/conversationsListResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
                 
     post:
@@ -36,5 +36,5 @@
                 body:
                     type: responseConversation
                     example: !include examples/conversationsCreateResponse.json
-            400:
+            400 401 404 500:
                 !include ../errorResponse.raml
