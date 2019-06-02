@@ -14,21 +14,6 @@
                     example: !include examples/usersGetProfileResponse.json
             400 401 404 500:
                 !include ../errorResponse.raml
-    put:
-        description: "Update user profile"
-        queryParameters:
-            userToken:
-                description: "The user for which to update the profile"
-                required: true
-                type: string
-                example: "abcdefghijk123"
-        body:
-            type: requestUserProfile
-            example: !include examples/usersUpdateProfileRequest.json
-        responses:
-            204: 
-            400 401 404 500:
-                !include ../errorResponse.raml
 
 /{id}:
     get:
@@ -68,6 +53,22 @@
                 body:
                     type: responseUser
                     example: !include examples/usersRegisterResponse.json
+            400 401 404 500:
+                !include ../errorResponse.raml
+
+    put:
+        description: "Update user profile"
+        queryParameters:
+            userToken:
+                description: "The user for which to update the profile"
+                required: true
+                type: string
+                example: "abcdefghijk123"
+        body:
+            type: requestUserProfile
+            example: !include examples/usersUpdateProfileRequest.json
+        responses:
+            204: 
             400 401 404 500:
                 !include ../errorResponse.raml
 
