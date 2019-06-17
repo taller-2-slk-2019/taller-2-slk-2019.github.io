@@ -254,3 +254,13 @@ responseOrganizationStatistics:
     properties:
         usersCount: responseRolesCount[]
         messagesCount: responseMessagesCount[]
+
+responseRequestStats:
+    type: object
+    properties:
+        method: string
+        statusCode: integer
+        resource: string
+        isAdmin: boolean
+        responseTime: integer
+        error?: string

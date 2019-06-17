@@ -11,3 +11,20 @@
                     example: !include examples/adminLoginResponse.json
             400 401 404 500:
                 !include ../errorResponse.raml
+
+/request-stats:
+    get:
+        description: "Get server requests statistics"
+        queryParameters:
+            adminToken:
+                description: "The admin token"
+                required: true
+                type: string
+                example: "abdasdasd3"
+        responses:
+            200:
+                body:
+                    type: responseRequestStats[]
+                    example: !include examples/requestStatsResponse.json
+            400 401 404 500:
+                !include ../errorResponse.raml

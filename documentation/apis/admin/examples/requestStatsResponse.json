@@ -1,0 +1,34 @@
+[
+    {
+        "method": "GET",
+        "statusCode": 200,
+        "resource": "organizations",
+        "isAdmin": false,
+        "responseTime": 4,
+        "error": null,
+    },
+    {
+        "method": "GET",
+        "statusCode": 404,
+        "resource": "channels",
+        "isAdmin": false,
+        "responseTime": 1,
+        "error": "OrganizationNotFoundError",
+    },
+    {
+        "method": "POST",
+        "statusCode": 400,
+        "resource": "messages",
+        "isAdmin": true,
+        "responseTime": 200,
+        "error": "InvalidQueryError",
+    },
+    {
+        "method": "GET",
+        "statusCode": 401,
+        "resource": "admin",
+        "isAdmin": false,
+        "responseTime": 2,
+        "error": "UnauthorizedUserError",
+    }
+]
